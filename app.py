@@ -2,17 +2,17 @@ import os
 import tempfile
 import streamlit as st # pyright: ignore[reportMissingImports]
 
-# Document processing & vector store
+
 from langchain_community.document_loaders import PyPDFLoader  # pyright: ignore[reportMissingImports]
 from langchain_text_splitters import RecursiveCharacterTextSplitter  # pyright: ignore[reportMissingImports]
 from langchain_community.vectorstores import FAISS  # pyright: ignore[reportMissingImports]
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI  # pyright: ignore[reportMissingImports]
 
-# LangChain classic chains (for compatibility with LangChain 1.0+)
+
 from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain  # pyright: ignore[reportMissingImports]
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain  # pyright: ignore[reportMissingImports]
 
-# Prompts & messages
+
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder  # pyright: ignore[reportMissingImports]
 from langchain_core.messages import HumanMessage, AIMessage  # pyright: ignore[reportMissingImports]
 
